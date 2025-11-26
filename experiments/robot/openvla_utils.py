@@ -279,7 +279,7 @@ def get_vla(cfg: Any) -> torch.nn.Module:
         check_model_logic_mismatch(cfg.pretrained_checkpoint)
 
     # Load the model
-    vla = AutoModelForVision2Seq.from_pretrained(
+    vla = OpenVLAForActionPrediction.from_pretrained(
         cfg.pretrained_checkpoint,
         # attn_implementation="flash_attention_2",
         torch_dtype=torch.bfloat16,
